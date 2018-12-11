@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+add content 
+:)
+=======
+fixing stuff :)
+>>>>>>> fix_something
