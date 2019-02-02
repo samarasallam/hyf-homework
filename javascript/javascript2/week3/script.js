@@ -55,13 +55,20 @@ console.log("movies rated higher than 6 is " + onlyRating.length + " / They are 
 
 //4 filter the movies with keywords 
 
-const keyWords = ["The", "dog", "who", "is", "not", "a", "man"];
+const keywords = ["The", "dog", "who", "is", "not", "a", "man"];
 
-let filteredMovies = movies.filter(movie => movie.title.toUpperCase().includes("man"));
+const MoviesWithKeywords = movies.filter(function (movie){
+	let doesMoviecontainKeyword = false; 
 
-let obj = movies.find(o => o.title.toLowerCase() == 'man');
+	return doesMoviecontainKeyword(movie.title); 
+})
 
-console.log(obj);
+function doesMoviecontainKeyword( title){
+	console.log(title);
+	keywords.forEach( (keyword) => 
+		console.log(title.includes(keyword))
+		
+}); 
 
 
 //5 calculate the average rating 
