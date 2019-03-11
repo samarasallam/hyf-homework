@@ -162,4 +162,3 @@ hyfStudents.editStudentInfo({
 })
 
 hyfStudents.deleteStudent('Bob');
-hyfStudents.getList();
