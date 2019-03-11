@@ -79,14 +79,14 @@ return classList.map(student => {
 }
 
 //3. A method that can return one student's detailed information
-getStudentDetailByname(name) {
+getStudentDetailByName(name) {
     let selectedStudent = this.studentsList.filter(student => student.name.toLowerCase().includes(name.toLowerCase()));
     if (selectedStudent.length == 0) {
         console.log(`No result found`);
     } else {
         return selectedStudent;
     };
-    console.log(getStudentDetailByname);
+    console.log(getStudentDetailByName);
 }
 
 // 4. A method that can add a new student to HYF which receive the below person object as an input and store to existing list. Check for duplication. 
@@ -123,8 +123,6 @@ deleteStudent(name) {
 }
 
 let hyfStudents = new StudentBook();
-
-let Hakki = new Student(`Hakki`, 8, 'll@g.com', '222-22-22');
 let Keerthika = new Student(`Keerthika`, 8, `dfg@sd`, `333-33-33`);
 let Rieko = new Student(`Rieko`, 9, `bdk@jk`, `111-11-11`);
 let Sheila = new Student(`Sheila Qasemi`, 8, `dsf@sd`, `999-99-99`);
@@ -132,7 +130,7 @@ let studentWithDuplicatedEmail = new Student(`Sheila not Sheila`, 8, `dsf@sd`, `
 let Virgeen = new Student(`Virgeen`, 7, `virginrashed4@gmail.com`, `(259) 245-5777`);
 let spongeBob = new Student(`Bob`, 9, `spongebob@gmail.com`, `245-5666`)
 
-hyfStudents.addStudent(Hakki);
+
 hyfStudents.addStudent(Keerthika);
 hyfStudents.addStudent(Rieko);
 hyfStudents.addStudent(Sheila);
@@ -146,8 +144,8 @@ hyfStudents.getList();
 hyfStudents.getListByClass(8);
 hyfStudents.getListByClass(7);
 
-hyfStudents.getStudentDetailByname(`Hakk`);
-hyfStudents.getStudentDetailByname('Virgeen');
+hyfStudents.getStudentDetailByName(`Hakk`);
+hyfStudents.getStudentDetailByName('Virgeen');
 
 hyfStudents.editStudentInfo({
 "name": "Virgeen",
